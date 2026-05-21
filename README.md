@@ -1,4 +1,4 @@
-### Raspberry Pi Zero W e-Paper Infrastructure Monitor
+# Raspberry Pi Zero W e-Paper Infrastructure Monitor
 
 Low-power infrastructure monitoring appliance built with:
 -Raspberry Pi Zero W
@@ -23,13 +23,13 @@ The device acts as a lightweight always-on display node for self-hosted infrastr
 
 ## Hardware
 
-# Main Display Node
+### Main Display Node
 -Raspberry Pi Zero W
 -Waveshare 4.2" e-paper display (Rev 2.1)
 -microSD card
 -40-pin GPIO connection
 
-# Remote Infrastructure Node
+### Remote Infrastructure Node
 Example monitored server:
 -Raspberry Pi 5
 -Docker services
@@ -57,13 +57,13 @@ Heavy workloads remain on the monitored server.
 
 ## Current Dashboard Data
 
-# Display Node
+### Display Node
 -Hostname
 -IP address
 -CPU temperature
 -Load average
 
-# Remote Server
+### Remote Server
 -Online/offline status
 -CPU temperature
 -Root filesystem usage
@@ -100,7 +100,7 @@ Heavy workloads remain on the monitored server.
 This project involved several real-world Raspberry Pi Zero W issues.
 These are intentionally documented because they are useful for others building similar systems.
 
-# Wi-Fi Problems
+### Wi-Fi Problems
 Observed issues:
 -rfkill soft blocks
 -unstable DNS resolution
@@ -114,7 +114,7 @@ Fixes included:
 -using Raspberry Pi OS Bullseye 32-bit
 -avoiding heavier package operations when unnecessary
 
-# Waveshare Driver Problems
+### Waveshare Driver Problems
 The first selected Waveshare V2 driver locked permanently at:
 
 DEBUG:waveshare_epd.epd4in2_V2:e-Paper busy
@@ -130,14 +130,14 @@ After reboot:
 -the first telemetry query failed temporarily
 The dashboard was designed to recover automatically during the next refresh cycle.
 
-# Lessons Learned
+### Lessons Learned
 -Raspberry Pi Zero W is fully capable as a lightweight telemetry appliance
 -e-paper displays are excellent for always-on infrastructure monitoring
 -single-query SSH telemetry is much more stable than multiple SSH calls
 -real-world networking issues matter more than raw CPU performance
 -lightweight architectures are critical on low-power ARM devices
 
-# Future Improvements
+### Future Improvements
 Planned improvements:
 -partial refresh support
 -better fonts and icons
@@ -148,5 +148,5 @@ Planned improvements:
 -last successful update timestamp
 -last unhealthy container names
 
-# License
+### License
 MIT License
