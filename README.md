@@ -1,4 +1,4 @@
-Raspberry Pi Zero W e-Paper Infrastructure Monitor
+### Raspberry Pi Zero W e-Paper Infrastructure Monitor
 
 Low-power infrastructure monitoring appliance built with:
 
