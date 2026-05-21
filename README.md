@@ -1,4 +1,4 @@
-#### Raspberry Pi Zero W e-Paper Infrastructure Monitor
+### Raspberry Pi Zero W e-Paper Infrastructure Monitor
 
 Low-power infrastructure monitoring appliance built with:
 -Raspberry Pi Zero W
@@ -9,7 +9,7 @@ Low-power infrastructure monitoring appliance built with:
 -Fail2ban monitoring
 The device acts as a lightweight always-on display node for self-hosted infrastructure.
 
-### Features
+## Features
 -Remote telemetry over SSH
 -Docker container monitoring
 -Docker unhealthy container detection
@@ -21,46 +21,49 @@ The device acts as a lightweight always-on display node for self-hosted infrastr
 -Fully headless operation
 -Single SSH query optimization for lightweight telemetry collection
 
-### Hardware
+## Hardware
 
-## Main Display Node
+# Main Display Node
 -Raspberry Pi Zero W
 -Waveshare 4.2" e-paper display (Rev 2.1)
 -microSD card
 -40-pin GPIO connection
 
-## Remote Infrastructure Node
+# Remote Infrastructure Node
 Example monitored server:
 -Raspberry Pi 5
 -Docker services
 -Fail2ban
 -NVMe storage
 
-### Architecture
+## Architecture
+
+```text
 Raspberry Pi Zero W
-        │
-        │ SSH telemetry
-        ▼
+        |
+        | SSH telemetry
+        v
 Remote infrastructure server
-(Raspberry Pi 5)
-        │
-        ├── Docker
-        ├── Fail2ban
-        ├── NVMe storage
-        └── System telemetry
+Raspberry Pi 5
+        |
+        +-- Docker
+        +-- Fail2ban
+        +-- NVMe storage
+        +-- System telemetry
+```
 
 The Pi Zero W only renders the dashboard and performs lightweight telemetry collection.
 Heavy workloads remain on the monitored server.
 
-### Current Dashboard Data
+## Current Dashboard Data
 
-## Display Node
+# Display Node
 -Hostname
 -IP address
 -CPU temperature
 -Load average
 
-## Remote Server
+# Remote Server
 -Online/offline status
 -CPU temperature
 -Root filesystem usage
@@ -70,7 +73,9 @@ Heavy workloads remain on the monitored server.
 -Fail2ban jail count
 -Fail2ban ban counters
 
-### Example Dashboard Layout
+## Example Dashboard Layout
+
+```text
 +------------------------------------------------+
 | Pi Zero W Infra Monitor         2026-05-14     |
 +------------------------------------------------+
@@ -88,13 +93,14 @@ Heavy workloads remain on the monitored server.
 | F2B: 7 jails                                   |
 | Bans: sshd 0 / nginx 0                         |
 +------------------------------------------------+
+```
 
-### Real-World Problems Encountered
+## Real-World Problems Encountered
 
 This project involved several real-world Raspberry Pi Zero W issues.
 These are intentionally documented because they are useful for others building similar systems.
 
-## Wi-Fi Problems
+# Wi-Fi Problems
 Observed issues:
 -rfkill soft blocks
 -unstable DNS resolution
@@ -108,7 +114,7 @@ Fixes included:
 -using Raspberry Pi OS Bullseye 32-bit
 -avoiding heavier package operations when unnecessary
 
-## Waveshare Driver Problems
+# Waveshare Driver Problems
 The first selected Waveshare V2 driver locked permanently at:
 
 DEBUG:waveshare_epd.epd4in2_V2:e-Paper busy
@@ -118,20 +124,20 @@ This was especially important because:
 -the display hardware revision was older
 -newer Waveshare drivers were not fully compatible
 
-### SSH Timing During Boot
+## SSH Timing During Boot
 After reboot:
 -the Pi Zero dashboard service started faster than the remote server SSH service
 -the first telemetry query failed temporarily
 The dashboard was designed to recover automatically during the next refresh cycle.
 
-## Lessons Learned
+# Lessons Learned
 -Raspberry Pi Zero W is fully capable as a lightweight telemetry appliance
 -e-paper displays are excellent for always-on infrastructure monitoring
 -single-query SSH telemetry is much more stable than multiple SSH calls
 -real-world networking issues matter more than raw CPU performance
 -lightweight architectures are critical on low-power ARM devices
 
-## Future Improvements
+# Future Improvements
 Planned improvements:
 -partial refresh support
 -better fonts and icons
@@ -142,5 +148,5 @@ Planned improvements:
 -last successful update timestamp
 -last unhealthy container names
 
-## License
+# License
 MIT License
