@@ -234,6 +234,33 @@ cmd = (
 
 The final implementation intentionally uses a single SSH session for lightweight telemetry collection.
 
+## Current Version
+
+```text
+v1.0
+```
+
+### Included Features
+
+- Waveshare 4.2" e-paper support
+- Raspberry Pi Zero W support
+- SSH-based remote telemetry
+- Docker monitoring
+- Fail2ban monitoring
+- offline detection
+- systemd auto-start
+- NVMe monitoring
+- lightweight refresh loop
+
+### Planned Future Improvements
+
+- partial refresh support
+- improved typography
+- multiple remote hosts
+- graphical telemetry
+- historical statistics
+- stale-data timers
+
 ## Status
 
 Project status: actively developed
