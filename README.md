@@ -59,6 +59,7 @@ Example monitored server:
 - [Architecture](docs/architecture.md)
 - [Deployment](docs/deployment.md)
 - [Lessons Learned](docs/lessons-learned.md)
+- [Services](docs/services.md)
 
 ## Architecture
 
