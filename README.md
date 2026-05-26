@@ -52,6 +52,10 @@ Example monitored server:
 -Fail2ban
 -NVMe storage
 
+## Documentation
+
+- [Wiring](docs/wiring.md)
+
 ## Architecture
 
 ```text
