@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# Temporary files
+tmp/
+temp/
+
+# Raspberry Pi
+*.bak
+
+# Generated images
+output/
