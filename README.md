@@ -79,6 +79,31 @@ Raspberry Pi 5
 The Pi Zero W only renders the dashboard and performs lightweight telemetry collection.
 Heavy workloads remain on the monitored server.
 
+## Project Goals
+
+This project was designed to create a lightweight always-on infrastructure monitor with:
+
+- extremely low power usage
+- minimal software complexity
+- always-visible telemetry
+- reliable autonomous operation
+- SSH-based remote monitoring
+- no browser or web dashboard dependencies
+
+The Raspberry Pi Zero W acts purely as a low-power telemetry appliance.
+
+## Why e-Paper?
+
+E-paper displays are ideal for infrastructure monitoring because:
+
+- the image remains visible without constant refresh
+- power usage is extremely low
+- there is no backlight
+- the display is readable from far away
+- refreshes are infrequent in telemetry applications
+
+This makes e-paper suitable for 24/7 monitoring appliances.
+
 ## Current Dashboard Data
 
 ### Display Node
@@ -171,6 +196,20 @@ Planned improvements:
 -VPN monitoring
 -last successful update timestamp
 -last unhealthy container names
+
+## Status
+
+Project status: actively developed
+
+Current features:
+
+- remote SSH telemetry
+- Docker monitoring
+- Fail2ban monitoring
+- offline detection
+- NVMe monitoring
+- automatic systemd startup
+- Waveshare 4.2" e-paper rendering
 
 ### License
 MIT License
