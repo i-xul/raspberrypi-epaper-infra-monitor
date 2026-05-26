@@ -199,6 +199,15 @@ Planned improvements:
 -last successful update timestamp
 -last unhealthy container names
 
+## Repository Contents
+
+```text
+dashboard/
+├── dashboard_remote_v6.py
+├── dashboard_loop.py
+└── epaper-dashboard.service
+```
+
 ## Status
 
 Project status: actively developed
