@@ -60,6 +60,7 @@ Example monitored server:
 - [Deployment](docs/deployment.md)
 - [Lessons Learned](docs/lessons-learned.md)
 - [Services](docs/services.md)
+- [Storage and Power Considerations](docs/storage-and-power.md)
 
 ## Architecture
 
