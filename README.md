@@ -1,5 +1,7 @@
 # Raspberry Pi Zero W e-Paper Infrastructure Monitor
 
+![Pi Zero W e-Paper Monitor](screenshots/dashboard-angle.jpg)
+
 Low-power infrastructure monitoring appliance built with:
 -Raspberry Pi Zero W
 -Waveshare 4.2" e-paper display
@@ -20,6 +22,20 @@ The device acts as a lightweight always-on display node for self-hosted infrastr
 -Low-power e-paper display
 -Fully headless operation
 -Single SSH query optimization for lightweight telemetry collection
+
+## Screenshots
+
+### Dashboard close-up
+
+![Dashboard Close-up](screenshots/dashboard-closeup.jpg)
+
+### Full setup
+
+![Full Setup](screenshots/full-setup.jpg)
+
+### GPIO wiring
+
+![GPIO Wiring](screenshots/gpio-wiring.jpg)
 
 ## Hardware
 
