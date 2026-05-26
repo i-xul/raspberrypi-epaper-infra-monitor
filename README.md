@@ -207,6 +207,32 @@ dashboard/
 ├── dashboard_loop.py
 └── epaper-dashboard.service
 ```
+## Code Example
+
+Example dashboard refresh loop:
+
+```python
+while True:
+    subprocess.run(
+        ["/usr/bin/python3",
+         "/home/hmasi/waveshare_epaper/dashboard_remote_v6.py"]
+    )
+
+    time.sleep(300)
+```
+
+Example remote telemetry collection:
+
+```python
+cmd = (
+    "hostname; "
+    "vcgencmd measure_temp; "
+    "df -h /; "
+    "docker ps --format '{{.Names}}' | wc -l"
+)
+```
+
+The final implementation intentionally uses a single SSH session for lightweight telemetry collection.
 
 ## Status
 
