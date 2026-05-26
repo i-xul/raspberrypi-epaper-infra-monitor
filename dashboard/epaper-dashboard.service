@@ -1,0 +1,11 @@
+[Unit]
+Description=Raspberry Pi Zero W e-Paper Dashboard
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/hmasi/waveshare_epaper/dashboard_loop.py
+Restart=always
+User=hmasi
+
+[Install]
+WantedBy=multi-user.target
