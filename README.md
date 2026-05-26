@@ -55,6 +55,7 @@ Example monitored server:
 ## Documentation
 
 - [Wiring](docs/wiring.md)
+- [Troubleshooting](docs/troubleshooting.md)
 
 ## Architecture
 
