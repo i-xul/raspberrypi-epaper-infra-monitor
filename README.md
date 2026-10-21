@@ -3,13 +3,12 @@
 ![Pi Zero W e-Paper Monitor](screenshots/dashboard-angle.jpg)
 
 Low-power infrastructure monitoring appliance built with:
--Raspberry Pi Zero W
--Waveshare 4.2" e-paper display
--Python
--SSH-based remote telemetry
--Docker monitoring
--Fail2ban monitoring
-The device acts as a lightweight always-on display node for self-hosted infrastructure.
+- Raspberry Pi Zero W
+- Waveshare 4.2" e-paper display
+- Python
+- SSH-based Raspberry Pi 5 telemetry
+- Raspberry Pi 4 DHT22 environmental monitoring
+- HTTPS JSON API integration
 
 ## Features
 
@@ -52,8 +51,6 @@ The device acts as a lightweight always-on display node for self-hosted infrastr
 ### Remote Infrastructure Node
 Example monitored server:
 -Raspberry Pi 5
--Docker services
--Fail2ban
 -NVMe storage
 
 ## Documentation
@@ -291,19 +288,6 @@ Dashboard v7 stores the last successful DHT22 reading locally and uses ONLINE, S
 Environment variables must be available to the dashboard process. When running the dashboard through systemd, configure them in the service environment rather than relying on variables exported in an interactive SSH session.
 
 The repository uses example defaults instead of hardcoded private network addresses.
-
-Example remote telemetry collection:
-
-```python
-cmd = (
-    "hostname; "
-    "vcgencmd measure_temp; "
-    "df -h /; "
-    "docker ps --format '{{.Names}}' | wc -l"
-)
-```
-
-The final implementation intentionally uses a single SSH session for lightweight telemetry collection.
 
 ## Current Version
 
