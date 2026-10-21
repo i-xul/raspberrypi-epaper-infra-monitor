@@ -3,7 +3,7 @@
 import time
 import subprocess
 
-SCRIPT = "/home/hmasi/waveshare_epaper/dashboard_remote_v6.py"
+SCRIPT = "/home/hmasi/waveshare_epaper/dashboard_remote_v7.py"
 
 while True:
     subprocess.run(["/usr/bin/python3", SCRIPT])
